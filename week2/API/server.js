@@ -50,6 +50,7 @@ let index = products.findIndex((element) => element.id === id)
 if(!index) 
 {
     res.json({message:"not there"})
+    
 } 
 products.splice(index,0)
 res.json({message:'deleted'}) 

@@ -1,0 +1,27 @@
+{
+  "name": "vinya-atp-final",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinyareddy39/ATP_24EG105P30.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/vinyareddy39/ATP_24EG105P30/issues"
+  },
+  "homepage": "https://github.com/vinyareddy39/ATP_24EG105P30#readme",
+  "dependencies": {
+    "cookie": "^1.1.1",
+    "cookie-parser": "^1.4.7",
+    "express": "^5.2.1",
+    "mongoose": "^9.3.0"
+  }
+}
