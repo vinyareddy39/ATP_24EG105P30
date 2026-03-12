@@ -1,0 +1,26 @@
+###
+GET http://localhost:4000/products
+### 
+GET http://localhost:4000/products/103
+###
+POST  http://localhost:4000/products 
+Content-Type: application/json
+
+{
+    "id":103,
+    "name":"vinya",
+    "brand":"puma",
+    "price":20000
+}
+###
+PUT   http://localhost:4000/products
+Content-Type: application/json
+
+{
+    "id":102,
+    "name":"vidya",
+    "brand":"puma",
+    "price":20000
+}
+###
+DELETE http://localhost:4000/products/102
