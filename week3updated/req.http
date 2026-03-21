@@ -1,0 +1,31 @@
+GET http://localhost:3000/product-api/products 
+### 
+POST http://localhost:3000/product-api/products 
+Content-Type: application/json 
+
+{
+    "productId":132,
+    "productName" : "kiranaaa",
+    "price":20000,
+    "brand":"adidas"
+   
+
+}
+###
+PUT http://localhost:3000/product-api/products/69be7e5d9a89173aa7327571
+Content-Type: application/json 
+
+{
+    "productId":132,
+    "productName" : "laptop",
+    "price":20000,
+    "brand":"adidas"
+
+
+}
+
+###
+
+DELETE  http://localhost:3000/product-api/products/69be7e5d9a89173aa7327571
+
+### add product to user cart 
