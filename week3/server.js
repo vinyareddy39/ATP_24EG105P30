@@ -1,24 +1,23 @@
-import exp from 'express';
-import { connect } from 'mongoose';
+import exp from 'express'
+import { productApp } from './API/productApi.js' 
+import { connect } from 'mongoose'
 
-import { productApp } from './API/productapi.js';
-import cookieParser from 'cookie-parser';
+const app = exp() // it create express application // hold the express function 
+app.use(exp.json()) // 
+app.use('/product-api',productApp) 
+const port = 3000 // create of server 
+// assign port number to htt4p server  
+app.listen(port , () => console.log(`server listening port ${port} ...`))   
 
-const app = exp()
-const port = 4000
-app.use(exp.json())
-app.use(cookieParser())
-
-app.use("/product-api", productApp)
-app.listen(4000, () => console.log("server on port ..."))
-// connect().then().catch()  connect to db server another way 
-async function connectDB() {
+ // connnect to mangodb
+ async function connectDB() {
     try {
-        await connect("mongodb://localhost:27017"); // replace with ip address if localhost is not working 
+        await connect("mongodb://localhost:27017"); // replace with ip address if localhost is not working // replace with mongoatlas database 
         console.log("db connection success")
 
     } catch (err) {
         console.log("error in db connection", err)
     }
 }
-connectDB()
+connectDB()       // 	this function return the function 
+// wait is used for promise to finish 
