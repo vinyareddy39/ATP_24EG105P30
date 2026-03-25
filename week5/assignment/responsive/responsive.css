@@ -61,45 +61,47 @@
 @media screen and (min-width:400px){
      .heading{
     background: white;  
+    font-size: 20px; 
    
 } 
+
 .heading p{ 
      position: absolute;
   top: 0;
   right: 0;  
+  margin-right: 100px;
   color: aqua; 
   word-spacing: 25px; 
+   font-size: 35px; 
   
 }  
+
 .heading h1{
-    color: blue;
+    color: blue; 
+    
 } 
 .second{
     text-align: center;  
     background-color: aqua;  
     color: white;  
-     padding: 100px;
+     padding: 70px;
 }
 .second img{
     border-radius: 50%;
-    width: 100px;  
+    width: 300px;  
    
 } 
+.second div{
+    font-size: 35px;
+}
 .third{
     display: flex;
 }   
-.flex1{
-    flex: 1;
-} 
-.flex2{
+.flex1 , .flex2 ,.flex3{
     flex: 1; 
-    /* text-align: center; */  
-    
-}
-.flex3{
-    flex: 1;
-  
-}
+    font-size: 24px;
+} 
+
 .flex2 img{
     width: 600px;
 

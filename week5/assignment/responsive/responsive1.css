@@ -1,11 +1,17 @@
- @media screen and (min-width:400px){
- .first{
-    color: red; 
+ *{
+    padding: 0;
+    margin: 0; 
+    box-sizing: border-box;
+ } 
+
+
+.first{
+    color: rgb(87, 87, 156); 
     background-color: wheat; 
     padding: 10px;
 } 
 .second {
-    background-color: red; 
+    background-color: rgb(9, 9, 57); 
     color: white;  
     font-size: 15px; 
 } 
@@ -34,5 +40,45 @@
 .flex3{
     flex: 1;
     
-  
-} }
+} 
+
+ @media screen and (min-width:600px){
+ .first{
+    color: red; 
+    background-color: wheat; 
+    padding: 10px;
+} 
+.second {
+    background-color: red; 
+    color: white;  
+    font-size: 30px;  
+    display: flex; 
+    
+   
+}  
+.second div{
+ padding: 150px; 
+ 
+
+}
+.second img{
+    display: block;
+    margin: auto;    
+    border-radius: 30px;
+    
+} 
+.third{
+    display: flex;
+    gap: 40px;
+    padding: 20px;
+    justify-content: space-between;
+      background-color: red 
+
+} 
+.flex1 , .flex2 , .flex3{
+    flex: 1; 
+      background-color: rgb(106, 21, 21);
+    padding: 20px; 
+    color: white;
+} 
+ }
