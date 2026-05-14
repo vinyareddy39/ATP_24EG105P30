@@ -6,12 +6,14 @@ app.listen(port,() => {
 })
 let products = [] 
 app.use(exp.json())  
+ 
 
+// read all users
 app.get('/products',(req,res)=>
 {
     res.json({message:"productscreated",payLoad:products})
 })
-
+// read a user by object id
 app.get('/products/:id',(req,res)=>
 {
   let id = Number(req.params.id) 
@@ -22,13 +24,14 @@ app.get('/products/:id',(req,res)=>
 }
   res.json({message:"the products is present ",payLoad:products})
 })
-
+// create a new user
 app.post('/products',(req,res)=>
 {
     let product = req.body  ; 
     products.push(product) 
     res.json({message:"products created"})
-})
+}) 
+// modify a user
 app.put('/products',(req,res) =>{
 let modifyuser = req.body ; 
 // let id = Number(req.params.id)
@@ -43,6 +46,7 @@ products.splice(index,1,modifyuser)
 res.json({message:"the modifiyed user is "})
 }
 ) 
+// delete a user
 app.delete('/products/:id',(req,res)=>
 {
     let id = Number(req.params.id)

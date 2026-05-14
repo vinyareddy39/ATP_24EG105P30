@@ -5,7 +5,8 @@ import { applyDiscount } from './discount.js';
 // TODO: Implement these functions
 export function processPayment(paymentMethod, couponCode = null) {
   const items = getCartItems();
-const total = getCartTotal();
+const total = getCartTotal(); 
+// Apply discount if applicable
 if (paymentMethod === "cod" || paymentMethod === "upi" || paymentMethod === "card") {
 return false 
 }
@@ -17,7 +18,8 @@ total: total,
 paymentMethod: method,
 status: "success"
 };
-}
+} 
+// Validate payment method
 export function validatePaymentMethod(method) {
   // Check if method is valid (card/upi/cod) 
   if(method =="card" || method === "upi" || method === "cod")
@@ -25,7 +27,7 @@ export function validatePaymentMethod(method) {
     return true 
   }
 }
-
+// Generate order ID
 function generateOrderId() {
   
   return 'ORD' + Date.now();

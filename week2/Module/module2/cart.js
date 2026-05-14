@@ -1,8 +1,9 @@
-// ii. cart.js - Shopping cart operations
+// ii. cart.js - Shopping cart operations 
+// Add product to cart
 import { getProductById, checkStock, getAllProducts } from './product.js';
 let cartItems = [];
 export function addToCart(productId, quantity) {
-
+ // Add product to cart
 if(!checkStock(productId, quantity)){
 return "not enough stock";
 }
@@ -17,6 +18,7 @@ cartItems.push({ productId, quantity });
 
 return "added to cart";
 }
+// Remove product from cart
 export function removeFromCart(productId) {
 let index = cartItems.findIndex(i => i.productId === productId);
 
@@ -26,6 +28,7 @@ return "item removed";
 }
 
 }
+// Update quantity of product in cart
 export function updateQuantity(productId, newQuantity) {
 // Update quantity of product in cart 
 let item = cartItems.find(i => i.productId === productId);
@@ -40,7 +43,7 @@ return " not found";
 
 export function getCartItems() {
 return cartItems
-}
+}// Calculate total price of all items in cart
 export function getCartTotal() {
 // Calculate total price of all items in cart 
 let total = 0;
@@ -59,7 +62,7 @@ return total;
 }
 
 
-
+// Clear cart
 export function clearCart() {
 cartItems = [] 
 }

@@ -1,5 +1,6 @@
 let array = [10,20,30,40,50]
-let sum = 0 
+let sum = 0  
+// find smallest element
 for (let arrays of array)
 {
  sum = sum + arrays
